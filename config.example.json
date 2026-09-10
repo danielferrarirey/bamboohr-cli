@@ -1,0 +1,6 @@
+{
+  "subdomain": "doodle",
+  "employeeId": 550,
+  "csrfToken": "paste x-csrf-token header value here",
+  "cookie": "paste full Cookie header value here"
+}

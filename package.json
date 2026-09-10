@@ -1,0 +1,11 @@
+{
+  "name": "bamboohr-cli",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CLI to submit BambooHR timesheet clock entries from a JSON file",
+  "main": "apply-timesheet.js",
+  "scripts": {
+    "apply": "node apply-timesheet.js"
+  }
+}
