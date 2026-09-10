@@ -4,12 +4,19 @@ Submit BambooHR timesheet clock entries from a JSON file, without pasting the cu
 
 ## Setup
 
-Already done for you once — `config.json` holds your session cookie, csrf token,
-subdomain (`doodle`) and employee id (`550`), taken from the curl you provided.
+1. Copy the template: `cp config.example.json config.json` (this file is gitignored —
+   it holds your session cookie and csrf token, never commit it).
+2. Open your BambooHR timesheet page in Chrome, open DevTools → Network tab, and
+   submit or edit any entry manually.
+3. Find the `entries` request in the Network tab and copy these values into
+   `config.json`:
+   - `subdomain` — the part before `.bamboohr.com` in the URL
+   - `employeeId` — the `id` query param on the timesheet page URL
+   - `cookie` — the full `Cookie` request header
+   - `csrfToken` — the `x-csrf-token` request header
 
-**These expire.** When requests start failing with 401/403, open the timesheet page in
-Chrome DevTools (Network tab), submit one entry manually, find the `entries` request, and
-copy the `Cookie` and `x-csrf-token` header values into `config.json`.
+**These expire.** When requests start failing with 401/403, repeat steps 2-3 to
+refresh `cookie` and `csrfToken` in `config.json`.
 
 ## Usage
 
