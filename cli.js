@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // Submits BambooHR timesheet clock entries.
 // Usage:
-//   node apply-timesheet.js [entries.json] [--config config.json] [--dry-run]
-//   node apply-timesheet.js --month august [--year 2026] [--dry-run]
+//   node cli.js [entries.json] [--config config.json] [--dry-run]
+//   node cli.js --month august [--year 2026] [--dry-run]
 
 import { readFile } from "node:fs/promises";
 import path from "node:path";

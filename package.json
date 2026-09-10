@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "description": "CLI to submit BambooHR timesheet clock entries from a JSON file",
-  "main": "apply-timesheet.js",
+  "main": "cli.js",
   "scripts": {
-    "apply": "node apply-timesheet.js"
+    "apply": "node cli.js"
   }
 }

@@ -22,18 +22,18 @@ refresh `cookie` and `csrfToken` in `config.json`.
 
 ```bash
 # Edit entries.json with the day(s) you want to submit, then:
-node apply-timesheet.js
+node cli.js
 
 # Preview the payload without sending anything:
-node apply-timesheet.js --dry-run
+node cli.js --dry-run
 
 # Use a different entries file:
-node apply-timesheet.js my-week.json
+node cli.js my-week.json
 
 # Apply a whole month at once (every weekday, 9am-12pm + 1pm-6pm):
-node apply-timesheet.js --month august
-node apply-timesheet.js --month august --year 2026   # defaults to current year
-node apply-timesheet.js --month aug --dry-run          # abbreviations work too
+node cli.js --month august
+node cli.js --month august --year 2026   # defaults to current year
+node cli.js --month aug --dry-run          # abbreviations work too
 ```
 
 `entries.json` is a JSON array, e.g.:
